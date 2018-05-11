@@ -2,10 +2,9 @@ import React from 'react';
 
 import BoardImage from './BoardImage';
 
-const BoardRows = ({ rows, columns, board }) => {
-
-  const cards = board.map( row => (
-    <BoardImage row={row} />
+const BoardRows = ({ handleImageClick, board }) => {
+  const cards = board.map(image => (
+    <BoardImage image={image} handleImageClick={handleImageClick} />
   ));
 
   return cards;
